@@ -248,13 +248,14 @@ body{
 
 
 
-
+.sidebar_container{
+    position: relative;
+    width: 293px;
+}
 .sidebar{
     width: 293px;
     margin-top: 23px;
     position: fixed;
-    right: 215px;
-    top: 87px;
 }
 .profile{
     display: flex;
