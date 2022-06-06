@@ -355,7 +355,20 @@ body{
 }
 
 
+.top_menu_mobile {
+    display: none;
+}
+.bottom_menu_mobile {
+    display: none;
+}
 
+
+
+
+
+
+
+/* Desktop no Sidebar */
 @media (max-width: 935px) {
     .sidebar{
         display: none;
@@ -382,62 +395,40 @@ body{
     }
 }
 
+
+
+/* Mobile */
 @media (max-width: 614px) {
-    .sidebar{
+    .sidebar, .top_menu > div{
         display: none;
     }
-    .top_menu{
-        width: 100vw;
-    }
-    .top_menu > div{
-        width: 100vw;
-        display: None;
-    }
     .page_content{
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        margin: 0 0 0 0;
+        margin: 0 0 54px 0;
     }
-
     .main_page{
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
-        margin: 0;
     }
     .story_browser{
         background-color: #FAFAFA;
-        box-sizing: border-box;
         width: 100vw;
         height: 121px;
-        margin: 0 0 0 23px;
+        margin: 0 0 0 0;
         border-radius: initial;
         border: initial;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
         padding: 0;
-        overflow: hidden;
+    }
+    .story{
+        margin-left: 14px;
+        margin-right: 0;
     }
     .story_right_button{
         display: None;
     }
-    .posts_column{
-        width: 100vw;
-    }
-    .post{
-        width: 100vw;
-    }
-    .post > img{
-        width: 100vw;
-    }
-    .post_header{
+    .posts_column,
+    .post,
+    .post > img,
+    .post_header,
+    .post_likes{
         width: 100vw;
     }
     .post_header > div{
@@ -446,7 +437,34 @@ body{
     .post_buttons > div{
         width: 95.11vw;
     }
-    .post_likes{
+    .top_menu_mobile {
+        position: absolute;
+        top: 0;
+        left: 3.27vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 93.46vw;
+        height: 54px;
+    }
+    .bottom_menu_mobile {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100vw;
+        height: 54px;
+        background-color: #FFFFFF;
+        border-top: 1px solid #DBDBDB;
+    }
+    .bottom_menu_mobile > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 93.46vw;
+        height: 54px;
     }
 }
